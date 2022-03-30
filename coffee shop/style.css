@@ -1,0 +1,609 @@
+:root {
+	--navcolor: transpharent;
+}
+
+html, body, div, span, h1, h2, h3, h4, h5, p, a {
+	margin: 0%;
+	padding: 0%;
+}
+
+body {
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+}
+
+.hide {
+	opacity: 0;
+	transition: all 500ms ease-in-out;
+}
+
+.show {
+	opacity: 1;
+}
+
+.loading {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: white;
+	z-index: 100;
+	transition: all 500ms ease-in-out;
+}
+
+.loadinglogo {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 20%;
+	height: 20%;
+}
+.logo {
+	width: 120px;
+	height: 120px;
+}
+
+.loadingpath {
+	stroke-dasharray: 1508;
+	stroke-dashoffset: 0;
+	animation: 4s pathanimation ;
+}
+
+@keyframes pathanimation {
+	0% {
+		stroke-dashoffset: 0;
+	}
+
+	25% {
+		stroke-dashoffset: 1508;
+	}
+
+	50% {
+		stroke-dashoffset: 0;
+	}
+
+	75% {
+		stroke-dashoffset: 1508;
+	}
+
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+.nav {
+	justify-content: space-between;
+	height: 100px;
+	width: 100%;
+	transition: all 500ms ease-in-out;
+
+}
+
+
+.navwrap {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+
+.brand {
+	margin: 0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	color: white;
+	margin-left: 2%;
+}
+
+.navlinks {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+	width: 50%;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+
+.navlinks li a {
+	text-decoration: none;
+	color: white;
+}
+
+.navlinks li a::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: rgb(255, 255, 255);
+	opacity: 0;
+	transition: 500ms all ease-in-out;
+	cursor: default;
+}
+
+.navlinks li a:hover::after {
+	opacity: 1;
+}
+
+.burger {
+	height: 50%;
+	width: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-right: 2%;
+	display: none;
+	cursor: pointer;
+}
+
+.burger div {
+	width: 100%;
+	height: 20%;
+	background-color: white;
+}
+
+.navlogo {
+	width: 100%;
+	height: 100%;
+}
+
+.logowrap {
+	width: 50px;
+	height: 100%;
+}
+
+.brandwrap {
+	height: 100%;
+	display: flex;
+	width: 30%;
+	margin-left: 2%;
+}
+
+.burgermenu {
+	background-color: rgb(0, 0, 0);
+}
+
+.burgerlinks {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.burgermenu {
+	flex-direction: column;
+	justify-content: space-around;
+	height: 0px;
+	transition: 500ms all ease-in-out;
+	opacity: 0;
+}
+
+.active {
+	display: flex;
+}
+
+
+.burgermenu a {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	height: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 300ms all ease-in-out;
+}
+
+.burgermenu a:hover {
+	background-color: rgb(100, 100, 100);
+}
+
+.mainsec {
+	width: 100%;
+	height: 100vh;
+	background-image: url("img/arkashibackground.jpg");
+	min-height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.main {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.maintitle {
+	color: white;
+	transition: all 600ms ease-in-out;
+	opacity: 0;
+	letter-spacing: 2px;
+	font-size: 100px;
+	margin: 2% 0;
+}
+
+.mainh2 {
+	transition: all 700ms ease-in-out;
+	opacity: 0;
+
+}
+
+.mainh1 {
+	transition: all 800ms ease-in-out;
+	opacity: 0;
+
+}
+
+.maintext {
+	transition: all 900ms ease-in-out;
+	opacity: 0;
+
+}
+
+.mainlogowrap {
+	width: 40%;
+	height: 40%;
+}
+
+.mainlogo {
+	width: 100%;
+	height: 100%;
+	transition: all 500ms ease-in-out;
+	opacity: 0;
+}
+
+.mainh1, .mainh2, .maintext {
+	color: white;
+}
+
+.h2green {
+	color: green;
+}
+
+.h2red {
+	color: red;
+}
+
+.mainh2 {
+	text-align: center;
+}
+
+.mainh1 {
+	color: white;
+	text-align: center;
+}
+
+.maintext {
+	text-align: center;
+	color: white;
+	margin-top: 2%;
+}
+
+.aboutsec {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	scroll-padding-top: 300px;
+}
+
+.aboutblock {
+	background: rgb(0, 0, 0);
+	width: 30%;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.aboutblock h2, h1, p {
+	color: white;
+	text-align: center;
+}
+
+.aboutblock p {
+	width: 90%;
+}
+
+.menu {
+	width: 50%;
+	height: 50%;
+	margin-right: 5%;
+}
+
+.productsec {
+	width: 100%;
+	height: 100vh;
+	background-image: url("img/productsbackground.jpg");
+	min-height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+
+.products {
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.productblock {
+	width: 30%;
+	height: 50%;
+	background-color: black;
+	background-size: cover;
+	background-position: center;
+}
+
+.firstproduct {
+	background-image: url('img/cappuccino.jpg');
+}
+
+.secondproduct {
+	background-image: url('img/donut.jpg');
+}
+
+.thirdproduct {
+	background-image: url('img/icecoffee.jpg');
+}
+
+.productblock:hover .prodhover {
+	opacity: 1;
+}
+
+.prodhover {
+	background-color: rgba(0, 0, 0, 0.76);
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: all 500ms ease-in-out;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  
+  ::-webkit-scrollbar-track {
+    background: #ffffff; 
+  }
+
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0); 
+	transition: all 500ms ease-in-out;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(#ffffff, #000000,#000000,#000000, #ffffff);
+
+
+  }
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+	height: 100%;
+}
+
+.line {
+	height: 10px;
+	width: 100%;
+	background: linear-gradient(270deg, #ffffff, #000000, #ffffff);
+}
+
+
+.info {
+	width: 33%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(0, 0, 0);
+}
+
+.lastInfo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 33%;
+}
+
+.address {
+	width: 33%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(0, 0, 0);
+}
+.lastInfo img {
+    width: 150px;
+    height: 150px;
+}
+.info ul li {
+    list-style-type: none;
+	color: rgb(255, 255, 255);
+	
+}
+
+.infotxt {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1;
+}
+
+
+
+.info ul {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.info ul li a {
+    text-decoration: none;
+	color: rgb(255, 255, 255);
+	margin-right: 10px;
+}
+
+.address ul {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.address ul li {
+    list-style-type: none;
+	color: rgb(255, 255, 255);
+	
+}
+
+.addresstxt {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.addresstxt a {
+	margin-left: 10px;
+}
+
+.headAddress {
+	font-size: 150%;
+	text-align: center;
+}
+
+.headinfo {
+	font-size: 150%;
+	text-align: center;
+}
+
+.address ul li a {
+	color: rgb(255, 255, 255);
+}
+
+.address ul li a {
+    text-decoration: none;
+}
+
+
+
+.footerlogowrap {
+	width: 30%;
+	height: 50%;
+}
+
+.footerlogo {
+	width: 100%;
+	height: 100%;
+}
+
+.footercompanyname {
+	color: black;
+}
+
+.footerinfo {
+	color: black;
+}
+
+.abouticon {
+	z-index: 1;
+}
+
+@media only screen and (max-width: 800px) {
+	.burger {
+		display: flex;
+	}
+	.navlinks {
+		display: none;
+	}
+
+	.aboutsec {
+		flex-direction: column;
+		justify-content: space-around;
+		height: 200vh;
+	}
+
+	.aboutblock {
+		width: 90%;
+		height: 32%;
+	}
+
+	.maintext {
+		display: none;
+	}
+
+	.products {
+		flex-direction: column;
+	}
+
+	.productsec {
+		height: 200vh;
+	}
+
+	.productblock {
+		width: 90%;
+		height: 30%;
+	}
+
+	.footer {
+		height: 100vh;
+	}
+
+	.footer_content {
+		flex-direction: column;
+	}
+
+	.info {
+		width: 100%;
+		height: 33%;
+	}
+
+	.lastInfo {
+		width: 100%;
+		height: 33%;
+
+	}
+
+	.address {
+		width: 100%;
+		height: 33%;
+
+	}
+	.hide {
+		opacity: 1;
+	}
+
+	.maintitle {
+		font-size: 80px;
+		margin-bottom: 5%;
+	}
+}
+
+
